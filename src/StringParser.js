@@ -5,7 +5,7 @@ StringParser.prototype.parseString = function (string) {
 };
 
 StringParser.prototype.stringToWordArray = function (string) {
-  return string.match(/\b([a-zA-z0-9'-]+)\b/g);
+  return string.match(/\b([a-zA-z0-9']+)\b/g);
 };
 
 StringParser.prototype.lowercaseString = function(string){

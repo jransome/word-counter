@@ -2,7 +2,7 @@ describe("Controller", function(){
   var Controller = require('../src/ApplicationController');
   var controller;
 
-  var mockFilePath = 'spec/mock-data/mockTextFile.txt';
+  var testFilePath = 'spec/test-data/TestTextFile.txt';
   var expectedWordCounts = { this: 1, is: 1, a: 1, very: 2, short: 1, story: 1 }
   var expectedStringOutputs = [
     "Word: this | Occurrences: 1 | Is the number of occurrences a prime number? false",
@@ -21,7 +21,7 @@ describe("Controller", function(){
   // effectively integration tests.
 
   it("calculates the word-count", function(){
-    expect(controller.executeWordCount(mockFilePath)).toEqual(expectedWordCounts);
+    expect(controller.executeWordCount(testFilePath)).toEqual(expectedWordCounts);
   });
 
   it("creates an array of strings to be outputted", function(){
@@ -30,7 +30,7 @@ describe("Controller", function(){
 
   it("outputs results to the console", function(){
     spyOn(console, 'log');
-    controller.runApplication(mockFilePath);
+    controller.runApplication(testFilePath);
     expectedStringOutputs.forEach(function(expectedWordOutput){
       expect(console.log).toHaveBeenCalledWith(expectedWordOutput);
     });

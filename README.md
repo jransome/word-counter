@@ -90,4 +90,3 @@ The `ApplicationController` controls this sequence of events. Testing this objec
 * Ability to sort results, eg. by occurrences, or if prime, or alphabetically.
 * Ability to run the program on different files by inputting their paths as arguments from the terminal.
 * Potentially extracting a 'word' class to contain a string of the word itself, the number of occurrences, and whether this number is a prime number or not.
-* Error handling

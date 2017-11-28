@@ -16,6 +16,10 @@ describe("PrimeNumberDetector", function(){
 
   it("returns false if the given integer is a composite number", function(){
     expect(primeNumberDetector.isPrime(4)).toBeFalsy();
+    expect(primeNumberDetector.isPrime(21)).toBeFalsy();
+    expect(primeNumberDetector.isPrime(111)).toBeFalsy();
+    expect(primeNumberDetector.isPrime(4055)).toBeFalsy();
+    expect(primeNumberDetector.isPrime(20000)).toBeFalsy();
   });
 
   it("returns false if the given integer is negative", function(){

@@ -6,6 +6,8 @@ describe("StringParser", function(){
   var expectedParsedOutput = ['this', 'is', 'a', 'test', 'input', 'string', "it's", 'a', 'nice-looking', 'string'];
   var hypenatedInputs = "just-in-time, mother-in-law, good-hearted";
   var expectedHyphenatedOutput = ['just-in-time', 'mother-in-law', 'good-hearted'];
+  var apostropheInputs = "James', can't, you're";
+  var expectedApostropheOutput = ["James", "can't", "you're"];
 
   beforeEach(function(){
     stringParser = new StringParser();
@@ -25,5 +27,9 @@ describe("StringParser", function(){
 
   it("counts hypenated words as a single word", function(){
     expect(stringParser.stringToWordArray(hypenatedInputs)).toEqual(expectedHyphenatedOutput);
+  });
+
+  it("counts words with apostrophes as single words", function(){
+    expect(stringParser.stringToWordArray(apostropheInputs)).toEqual(expectedApostropheOutput);
   });
 });

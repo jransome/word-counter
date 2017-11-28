@@ -30,7 +30,7 @@ describe("PrimeNumberDetector", function(){
     expect(primeNumberDetector.isPrime(0)).toBeFalsy();
   });
 
-  it("returns false if the given a non integer", function(){
+  it("returns false if given a non-integer", function(){
     expect(primeNumberDetector.isPrime(33.2)).toBeFalsy();
   });
 });
